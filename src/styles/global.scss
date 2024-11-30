@@ -1,7 +1,7 @@
-@use 'variables'as var;
+@use "variables" as var;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var.$second-font;
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,7 +22,7 @@ a {
 }
 
 a:hover {
-  color: var.$pink_535bf2;
+  // color: var.$pink_535bf2;
 }
 
 h1 {
