@@ -15,7 +15,7 @@
 # Оптимизировать векторные изображения
   pnpm run sprite
 # Оптимизировать растровые изображения
-  - pnpm run optimize:img
+  - pnpm run optimaze:img
   - папка original_images содержит в себе оригинальные картинки, далее они попадают в папку public/assets/images, скрипт по оптимизации находится в файле sharp.js
 # Задеплоить на гитхаб pages
   pnpm run build если не делали
