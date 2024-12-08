@@ -8,36 +8,52 @@
 </head>
 
 <body class="page__body">
-    <div id="app" class="page__content">
+    <div class="page__content">
         <header class="header">
-            <div class="container">
-                <button class="counter"></button>
-                <a href="src/pages/catalog.html">catalog</a>
+            <div class="header__menu menu">
+                <!-- бургер -->
+                <button class="header__icon icon-menu" type="button" aria-label="Открыть меню.">
+                    <!-- для рисования бургера -->
+                    <span></span>
+                </button>
+                <nav class="menu__body" aria-label="Навигация по сайту.">
+                    <ul class="menu__list list-reset">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--current" href="index.html" aria-current="page">Booking</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="Facilities.html">Facilities</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="About.html">About Us</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="Location.html">Location</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header__button button" type="button" aria-label="Открыть личный кабинет.">Login</button>
             </div>
         </header>
         <main class="main">
             <section>
                 <div class="container">
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <p>affsdddddd</p>
-                    <svg width="50" height="50">
-                        <use href="/assets/vectors/sprite.svg#shield"></use>
-                    </svg>
-                    <img src="/assets/images/avatar-1.avif323" alt="">
+
                 </div>
             </section>
         </main>
         <footer class="footer">
             <div class="container">
                 <h2>FOOTER</h2>
+                <button class="counter"></button>
+                <a href="src/pages/catalog.html">catalog</a>
+                <svg width="50" height="50">
+                    <use href="/assets/vectors/sprite.svg#shield"></use>
+                </svg>
+                <img src="/assets/images/avatar-1.avif323" alt="">
             </div>
         </footer>
     </div>

@@ -1,13 +1,13 @@
 @use "variables" as var;
 
 :root {
-  font-family: var.$second-font;
+  font-family: var.$first-font;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: var.$black;
+  color: var.$body-text;
+  background-color: var.$body;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,9 +31,18 @@ h1 {
 }
 
 .container {
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 60px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 768px;
+    padding: 0 80px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 1280px;
+  }
 }
 
 .page {
@@ -61,4 +70,10 @@ h1 {
 
 .image__hotel {
   border: 50px solid red;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

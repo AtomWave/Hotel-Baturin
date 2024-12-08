@@ -1,0 +1,22 @@
+@use "variables" as var;
+
+.header {
+  // .header__menu
+  &__menu {
+    position: relative;
+  }
+  // .header__icon
+  &__icon {
+    // display: none;
+  }
+  // .header__button
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

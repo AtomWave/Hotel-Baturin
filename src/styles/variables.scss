@@ -1,6 +1,11 @@
-$black: #242424;
-$white: #ffffff;
-$green: #24ab70;
+$body: #ffffff;
+$body-text: #242424;
+$contrast-text: #ffffff;
+$accent-text: #24ab70;
+$button: #24ab70;
+$stroke-arrow: #1d263a;
+$field-input: #fafafa;
+$discover-background: #f4fbf8;
 $star: #f95f5f;
 $faded-star: #e5e5e5;
 $fb: #1877f2;
@@ -12,3 +17,8 @@ $stroke-seller: #f4fdfe;
 
 $first-font: "OpenSans", "Arial", sans-serif;
 $second-font: "Intan", "Arial", sans-serif;
+
+// Брейкпоинты
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
