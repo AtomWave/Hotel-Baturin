@@ -22,17 +22,24 @@
 
   .icon-menu {
     span {
-      transform: scale(0);
+      transform: rotate(180deg);
+      background-color: transparent;
+      left: 10px;
+    }
+
+    &::before,
+    &::after {
+      top: 0;
     }
 
     &::before {
-      transform: rotate(-45deg);
-      top: calc(50% - 2px);
+      transform: rotate(225deg);
+      top: calc(50% - 1px);
     }
 
     &::after {
-      transform: rotate(45deg);
-      bottom: calc(50% - 2px);
+      transform: rotate(135deg);
+      top: calc(50% - 1px);
     }
   }
 }
