@@ -13,5 +13,5 @@ export function generateHotels(hotels) {
     itemHotel.appendChild(titleHotel)
     listHotels.appendChild(itemHotel)
   });
-  // document.querySelector('main').appendChild(listHotels)
+  document.querySelector('main').appendChild(listHotels)
 }
