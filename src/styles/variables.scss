@@ -23,3 +23,10 @@ $second-font: "Intan", "Arial", sans-serif;
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1280px;
+
+/* variables.scss */
+:root {
+  --button-color: #24ab70; /* Цвет кнопки */
+  --button-hover-color: #24ab701a; /* Цвет кнопки при наведении */
+  --contrast-text-color: #ffffff; /* Цвет текста на кнопке */
+}

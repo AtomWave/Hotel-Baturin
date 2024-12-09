@@ -1,6 +1,7 @@
-import '/public/styles/style.scss'
-import { setupCounter } from './js/counter.js'
-import { initTabs } from './js/tabs.js'
+// main.js
+import '/public/styles/style.scss'; // Подключаем глобальные стили
+import { setupCounter } from './js/counter.js';
+import { initTabs } from './js/tabs.js';
 import { hotels } from "./js/hotels.js";
 import { initializeMenuToggle } from "./js/icon-menu.js";
 import { generateHotels } from './js/generate-hotels.js';
@@ -11,9 +12,8 @@ if (counter) {
   setupCounter(counter);
 }
 
-setTimeout(() => generateHotels(hotels), 1000)
+setTimeout(() => generateHotels(hotels), 1000);
 initTabs();
-
 initializeMenuToggle('.icon-menu', '.header');
 
 // Создаем кнопку "Login"

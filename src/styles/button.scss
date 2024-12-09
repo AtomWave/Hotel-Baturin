@@ -1,39 +1,39 @@
-@use "variables" as var;
+// @use "variables" as var;
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: var.$button;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  word-wrap: break-word;
-  color: var.$contrast-text;
+// .button {
+//   display: inline-block;
+//   padding: 10px 20px;
+//   border-radius: 35px;
+//   background-color: var.$button;
+//   text-align: center;
+//   text-decoration: none;
+//   border: none;
+//   cursor: pointer;
+//   word-wrap: break-word;
+//   color: var.$contrast-text;
 
-  &:hover {
-    background-color: var.$button-hover;
-    color: var.$button;
-    transition: all 0.5s;
-  }
+//   &:hover {
+//     background-color: var.$button-hover;
+//     color: var.$button;
+//     transition: all 0.5s;
+//   }
 
-  &:focus-visible {
-    outline: none;
-    background-color: var.$button-hover;
-    color: var.$button;
-  }
+//   &:focus-visible {
+//     outline: none;
+//     background-color: var.$button-hover;
+//     color: var.$button;
+//   }
 
-  @supports not selector(:focus-visible) {
-    &:focus {
-      outline: none;
-      background-color: var.$button-hover;
-      color: var.$button;
-    }
-  }
+//   @supports not selector(:focus-visible) {
+//     &:focus {
+//       outline: none;
+//       background-color: var.$button-hover;
+//       color: var.$button;
+//     }
+//   }
 
-  &:active {
-    background-color: var.$button-hover;
-    color: var.$button;
-  }
-}
+//   &:active {
+//     background-color: var.$button-hover;
+//     color: var.$button;
+//   }
+// }

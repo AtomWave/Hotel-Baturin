@@ -1,5 +1,38 @@
 // js/buttonModule.js
 
+// Встраиваем стили непосредственно в JavaScript
+const styles = `
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 35px;
+    background-color: var(--button-color); /* Используем CSS-переменную */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    word-wrap: break-word;
+    color: var(--contrast-text-color); /* Используем CSS-переменную */
+}
+
+.button:hover {
+    background-color: var(--button-hover-color); /* Используем CSS-переменную */
+    color: var(--button-color); /* Цвет текста при наведении */
+    transition: all 0.5s;
+}
+
+.button:focus-visible {
+    outline: none;
+    background-color: var(--button-hover-color); /* Используем CSS-переменную */
+    color: var(--button-color); /* Цвет текста при фокусе */
+}
+
+.button:active {
+    background-color: var(--button-hover-color); /* Используем CSS-переменную */
+    color: var(--button-color); /* Цвет текста при нажатии */
+}
+`;
+
 // Функция для создания кнопки с параметрами
 export function createButton({ className, type = 'button', ariaLabel, text, parentSelector }) {
   // Создание элемента кнопки
@@ -22,6 +55,10 @@ export function createButton({ className, type = 'button', ariaLabel, text, pare
     console.error(`Элемент с селектором "${parentSelector}" не найден.`);
   }
 
-  // Подключение стилей
-  import('../styles/button.scss'); // Импортируем SCSS файл
+  // Встраиваем стили в документ
+  const styleSheet = document.createElement("style");
+  styleSheet.type = "text/css";
+  styleSheet.innerText = styles;
+
+  document.head.appendChild(styleSheet);
 }
