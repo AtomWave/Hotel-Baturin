@@ -18,9 +18,10 @@ initializeMenuToggle('.icon-menu', '.header');
 
 // Создаем кнопку "Login"
 createButton({
+  elementType: 'button', // Указываем тип элемента как 'link'
   className: 'header__button button',
-  type: 'button',
+  href: '#', // URL для ссылки (можно указать реальный URL)
   ariaLabel: 'Открыть личный кабинет.',
   text: 'Login',
-  parentSelector: '.header__menu' // Селектор родительского элемента, куда будет добавлена кнопка
+  parentSelector: '.header__menu' // Селектор родительского элемента, куда будет добавлена кнопка/ссылка
 });

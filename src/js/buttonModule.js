@@ -33,24 +33,42 @@ const styles = `
 }
 `;
 
-// Функция для создания кнопки с параметрами
-export function createButton({ className, type = 'button', ariaLabel, text, parentSelector }) {
-  // Создание элемента кнопки
-  const button = document.createElement('button');
-  button.className = className; // Установка класса кнопки
-  button.type = type; // Установка типа кнопки
-  button.setAttribute('aria-label', ariaLabel); // Установка aria-label
-  button.textContent = text; // Установка текста кнопки
+// Функция для создания кнопки или ссылки с параметрами
+export function createButton({
+  elementType = 'button', // Тип элемента ('button' или 'link')
+  className,
+  href = '', // URL для ссылки (если элемент - ссылка)
+  type = 'button', // Тип кнопки (только для кнопки)
+  ariaLabel,
+  text,
+  parentSelector
+}) {
+  // Создание элемента кнопки или ссылки
+  const element = document.createElement(elementType === 'link' ? 'a' : 'button');
 
-  // Добавление обработчика событий для кнопки
-  button.addEventListener('click', () => {
-    alert(`Вы нажали на кнопку: ${text}`); // Здесь можно добавить логику для обработки клика
+  if (elementType === 'link') {
+    element.href = href; // Установка URL для ссылки
+    element.role = 'button'; // Установка роли для доступности
+    element.setAttribute('aria-label', ariaLabel); // Установка aria-label
+    element.textContent = text; // Установка текста ссылки
+    element.className = className; // Установка класса ссылки
+    element.style.textDecoration = 'none'; // Убираем подчеркивание у ссылки
+  } else {
+    element.className = className; // Установка класса кнопки
+    element.type = type; // Установка типа кнопки
+    element.setAttribute('aria-label', ariaLabel); // Установка aria-label
+    element.textContent = text; // Установка текста кнопки
+  }
+
+  // Добавление обработчика событий для элемента
+  element.addEventListener('click', () => {
+    alert(`Вы нажали на ${elementType}: ${text}`); // Логика для обработки клика
   });
 
-  // Находим родительский элемент и добавляем кнопку в него
+  // Находим родительский элемент и добавляем элемент в него
   const parentElement = document.querySelector(parentSelector);
   if (parentElement) {
-    parentElement.appendChild(button);
+    parentElement.appendChild(element);
   } else {
     console.error(`Элемент с селектором "${parentSelector}" не найден.`);
   }
