@@ -5,18 +5,29 @@
   &__menu {
     position: relative;
   }
+
   // .header__icon
   &__icon {
-    // display: none;
+
   }
+
   // .header__button
   &__button {
     position: absolute;
-    top: 50%;
     right: 60px;
-    transform: translateY(-50%);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+
+    @media (min-width: var.$tablet-width) {
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+    }
+  }
+
+  // .header @media
+  @media (min-width: var.$tablet-width) {
+    padding: 40px 0px;
   }
 }

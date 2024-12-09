@@ -10,4 +10,30 @@
   border: none;
   cursor: pointer;
   word-wrap: break-word;
+  color: var.$contrast-text;
+
+  &:hover {
+    background-color: var.$button-hover;
+    color: var.$button;
+    transition: all 0.5s;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: var.$button-hover;
+    color: var.$button;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: none;
+      background-color: var.$button-hover;
+      color: var.$button;
+    }
+  }
+
+  &:active {
+    background-color: var.$button-hover;
+    color: var.$button;
+  }
 }
