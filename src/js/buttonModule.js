@@ -55,10 +55,9 @@ export function createButton({ className, type = 'button', ariaLabel, text, pare
     console.error(`Элемент с селектором "${parentSelector}" не найден.`);
   }
 
-  // Встраиваем стили в документ
+  // Встраиваем стили в документ без использования свойства type
   const styleSheet = document.createElement("style");
-  styleSheet.type = "text/css";
-  styleSheet.innerText = styles;
+  styleSheet.innerText = styles; // Добавляем стили напрямую
 
   document.head.appendChild(styleSheet);
 }
