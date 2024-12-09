@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "../variables" as var;
 
 .icon-menu {
   transition: all 0.25s;
@@ -36,15 +36,5 @@
 
   span {
     top: calc(50% - 2px);
-  }
-
-  &:hover {
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
   }
 }
