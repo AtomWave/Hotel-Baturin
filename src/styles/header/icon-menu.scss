@@ -2,10 +2,6 @@
 
 .icon-menu {
   transition: all 0.25s;
-  @media (min-width: var.$tablet-width) {
-    display: none;
-  }
-
   position: relative;
   width: 40px;
   height: 36px;
@@ -36,5 +32,9 @@
 
   span {
     top: calc(50% - 2px);
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
   }
 }
