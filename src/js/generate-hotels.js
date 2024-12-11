@@ -1,3 +1,5 @@
+// generate-hotels.js
+
 export function generateHotels(hotels) {
   const listHotels = document.createElement('ul');
   hotels.forEach(hotel => {

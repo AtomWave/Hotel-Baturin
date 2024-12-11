@@ -1,3 +1,5 @@
+// hotels.js
+
 const checkPath = window.location.href;
 const hasCatalog = checkPath.indexOf("pages") !== -1;
 
