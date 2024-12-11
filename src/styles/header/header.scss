@@ -4,6 +4,7 @@
   // .header__menu
   &__menu {
     position: relative;
+    transition: margin-bottom 2s ease; // Плавное изменение margin-bottom
   }
 
   // .header__icon

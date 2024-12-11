@@ -14,14 +14,14 @@ if (counter) {
 
 setTimeout(() => generateHotels(hotels), 1000);
 initTabs();
-initializeMenuToggle('.icon-menu', '.header');
+initializeMenuToggle('.icon-menu', '.header'); // Передаем селектор для заголовка
 
 // Создаем кнопку "Login"
 createButton({
-  elementType: 'button', // Указываем тип элемента как 'link'
+  elementType: 'button',
   className: 'header__button button',
-  href: '#', // URL для ссылки (можно указать реальный URL)
+  href: '#',
   ariaLabel: 'Открыть личный кабинет.',
   text: 'Login',
-  parentSelector: '.header__menu' // Селектор родительского элемента, куда будет добавлена кнопка/ссылка
+  parentSelector: '.header__menu'
 });
