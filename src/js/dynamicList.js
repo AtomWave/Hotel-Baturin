@@ -9,6 +9,8 @@ export function createDynamicList(items, options) {
     listType = 'ul', // Используем ul по умолчанию
     listClass = '',
     itemType = 'li', // Используем li по умолчанию
+    itemClass = '', // Класс для пунктов списка
+    linkClass = '', // Класс для ссылок
   } = options;
 
   const parentElement = document.querySelector(containerSelector);
@@ -34,12 +36,16 @@ export function createDynamicList(items, options) {
   items.forEach(item => {
     const listItem = document.createElement(itemType); // Создаем элемент пункта списка
 
+    if (itemClass) {
+      listItem.classList.add(...itemClass.split(' ')); // Добавляем класс к пункту списка
+    }
+
     if (item.link) { // Для меню навигации
       const link = document.createElement('a');
       link.href = item.link;
       link.textContent = item.text; // Устанавливаем текст ссылки
-      if (options.linkClass) {
-        link.classList.add(...options.linkClass.split(' ')); // Добавляем классы к ссылке
+      if (linkClass) {
+        link.classList.add(...linkClass.split(' ')); // Добавляем классы к ссылке
       }
       listItem.appendChild(link); // Добавляем ссылку в пункт списка
     } else if (item.src) { // Для изображений
@@ -47,9 +53,8 @@ export function createDynamicList(items, options) {
       img.src = item.src; // Устанавливаем источник изображения
       img.alt = item.alt || 'Изображение'; // Устанавливаем альтернативный текст
 
-      // Устанавливаем ширину и высоту изображения, если они указаны
-      if (item.width) img.width = item.width;
-      if (item.height) img.height = item.height;
+      if (item.width) img.width = item.width; // Устанавливаем ширину изображения, если указано
+      if (item.height) img.height = item.height; // Устанавливаем высоту изображения, если указано
 
       listItem.appendChild(img); // Добавляем изображение в пункт списка
     } else if (item.img) { // Для отелей
@@ -57,7 +62,6 @@ export function createDynamicList(items, options) {
       img.src = item.img;
       img.alt = item.title || 'Отель';
 
-      // Устанавливаем ширину и высоту изображения, если они указаны
       if (item.width) img.width = item.width;
       if (item.height) img.height = item.height;
 

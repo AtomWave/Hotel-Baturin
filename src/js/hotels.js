@@ -111,4 +111,14 @@ export const hotels = [
     width: 300, // Устанавливаем ширину изображения
     height: 200, // Устанавливаем высоту изображения
   },
-]
+];
+
+// Опции для настройки списка отелей
+export const hotelOptions = {
+  containerSelector: '.hotels',
+  listType: 'ul', // Используем ul для списка отелей
+  listClass: 'hotel-list',
+  itemType: 'li', // Используем li для каждого элемента списка
+  itemClass: 'hotel-item', // Класс для пунктов списка отелей
+};
+

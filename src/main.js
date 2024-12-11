@@ -6,7 +6,7 @@ import { initializeMenuToggle } from "./js/icon-menu.js";
 import { createButton } from './js/buttonModule.js';
 import { createDynamicList } from './js/dynamicList.js';
 import { items, options as menuOptions } from './js/menuItems.js'; // Импортируем данные и опции меню
-import { hotels } from './js/hotels.js'; // Импортируем данные об отелях
+import { hotels, hotelOptions } from './js/hotels.js'; // Импортируем данные об отелях и их опции
 import { imageItems, imageOptions } from './js/imageItems.js'; // Импортируем данные и опции изображений
 
 const counter = document.querySelector('.counter');
@@ -32,7 +32,7 @@ createButton({
 
 // Создаем динамический список меню и добавляем его на страницу только один раз
 document.addEventListener('DOMContentLoaded', () => {
-  createDynamicList(items, menuOptions); // Используем импортированные данные и опции
+  createDynamicList(items, menuOptions); // Используем импортированные данные и опции для меню
 });
 
 // ================= Список изображений ===================================
@@ -44,12 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ================= Список отелей ========================================
 
-// Опции для настройки списка отелей
-const hotelOptions = {
-  containerSelector: '.hotel-list',
-};
-
 // Создаем динамический список отелей и добавляем его на страницу только один раз
 document.addEventListener('DOMContentLoaded', () => {
-  createDynamicList(hotels, hotelOptions);
+  createDynamicList(hotels, hotelOptions); // Используем импортированные данные и опции для отелей
 });

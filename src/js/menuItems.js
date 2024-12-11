@@ -29,5 +29,6 @@ export const options = {
   listType: 'ul', // Тип списка (ul, ol, dl)
   listClass: 'menu__list list-reset', // Классы для элемента списка
   itemType: 'li', // Тип пункта списка (li, dt, dd)
+  itemClass: 'menu__item', // Класс пункта списка 
   linkClass: 'menu__link', // Класс для ссылок
 };
