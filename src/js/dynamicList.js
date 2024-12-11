@@ -47,11 +47,19 @@ export function createDynamicList(items, options) {
       img.src = item.src; // Устанавливаем источник изображения
       img.alt = item.alt || 'Изображение'; // Устанавливаем альтернативный текст
 
+      // Устанавливаем ширину и высоту изображения, если они указаны
+      if (item.width) img.width = item.width;
+      if (item.height) img.height = item.height;
+
       listItem.appendChild(img); // Добавляем изображение в пункт списка
     } else if (item.img) { // Для отелей
       const img = document.createElement('img');
       img.src = item.img;
       img.alt = item.title || 'Отель';
+
+      // Устанавливаем ширину и высоту изображения, если они указаны
+      if (item.width) img.width = item.width;
+      if (item.height) img.height = item.height;
 
       listItem.appendChild(img);
 

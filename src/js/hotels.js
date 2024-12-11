@@ -18,6 +18,8 @@ export const hotels = [
     title: 'Danubius Hotel Regents Park',
     price: 150,
     rating: 4.5,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -25,6 +27,8 @@ export const hotels = [
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -32,6 +36,8 @@ export const hotels = [
     title: 'London Bridge Hotel',
     price: 100,
     rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -39,6 +45,8 @@ export const hotels = [
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -46,6 +54,8 @@ export const hotels = [
     title: 'London Bridge Hotel',
     price: 100,
     rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -53,6 +63,8 @@ export const hotels = [
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -60,6 +72,8 @@ export const hotels = [
     title: 'London Bridge Hotel',
     price: 100,
     rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -67,6 +81,8 @@ export const hotels = [
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -74,6 +90,8 @@ export const hotels = [
     title: 'London Bridge Hotel',
     price: 100,
     rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -81,6 +99,8 @@ export const hotels = [
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
   {
     img: `${path}public/assets/images/london.webp`,
@@ -88,5 +108,7 @@ export const hotels = [
     title: 'London Bridge Hotel',
     price: 100,
     rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
   },
 ]
