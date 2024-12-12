@@ -98,3 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Родительский элемент .image-gallery-container не найден.');
   }
 });
+
+// Создаем кнопку "Search"
+createButton({
+  elementType: 'button',
+  className: 'run-search button',
+  href: '#',
+  ariaLabel: 'Найти отель.',
+  text: 'Search...',
+  parentSelector: '.search__btn'
+});

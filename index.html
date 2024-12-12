@@ -19,7 +19,43 @@
                 <nav class="menu__body" aria-label="Навигация по сайту."></nav>
             </div>
         </header>
-        <main class="main">
+        <main class="page__main main">
+            <section class="main__hero hero">
+                <div class="container">
+                    <div class="hero__wrapper">
+                        <div class="hero__content">
+                            <h1 class="hero__title">Find your perfect place to stay</h1>
+                            <p class="hero__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="hero__image">
+                            <img src="./public/assets/images/hiro.webp" alt="Фото коттеджа" width="640" height="656">
+                        </div>
+                        <form class="hero__search-form search">
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Location.</legend> -->
+                                <label class="search__label" for="location">Location</label>
+                                <input class="search__control field" id="location" name="location" type="text" value="United States" placeholder="United States" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Check In.</legend> -->
+                                <label class="search__label" for="check-in">Check In</label>
+                                <input class="search__control field" id="check-in" name="check-in" type="text" value="10 Jun 2021" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Check out.</legend> -->
+                                <label class="search__label" for="check-out">Check out</label>
+                                <input class="search__control field" id="check-out" name="check-out" type="text" value="15 Jun 2021" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Rooms for.</legend> -->
+                                <label class="search__label" for="rooms-for">Rooms for</label>
+                                <input class="search__control field" id="rooms-for" name="rooms-for" type="text" value="1 room, 2 guests" required="">
+                            </div>
+                            <div class="search__btn"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="container">
                     <div class="image-gallery"></div>
