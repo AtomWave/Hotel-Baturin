@@ -1,19 +1,11 @@
 export function createDynamicList(items, options) {
   const {
-    containerSelector,
     listType = 'ul',
     listClass = '',
     itemType = 'li',
     itemClass = '',
     linkClass = '',
   } = options;
-
-  const parentElement = document.querySelector(containerSelector);
-
-  if (!parentElement) {
-    console.error('Родительский элемент не найден.');
-    return;
-  }
 
   const list = document.createElement(listType);
   if (listClass) {
@@ -35,6 +27,7 @@ export function createDynamicList(items, options) {
         link.classList.add(...linkClass.split(' '));
       }
       listItem.appendChild(link);
+      console.log('Добавлена ссылка:', link.textContent); // Отладочное сообщение
     }
 
     // Обработка изображений
@@ -46,17 +39,21 @@ export function createDynamicList(items, options) {
       if (item.height) img.height = item.height;
       listItem.appendChild(img);
 
+      console.log('Добавлено изображение:', img.src); // Отладочное сообщение
+
       // Добавление заголовка и других свойств
       if (item.title) {
         const title = document.createElement('h2');
         title.textContent = item.title;
         listItem.appendChild(title);
+        console.log('Добавлен заголовок:', title.textContent); // Отладочное сообщение
       }
 
       if (item.subtitle) {
         const subtitle = document.createElement('p');
         subtitle.textContent = item.subtitle;
         listItem.appendChild(subtitle);
+        console.log('Добавлено подзаголовок:', subtitle.textContent); // Отладочное сообщение
       }
 
       if (item.price !== undefined) {
@@ -64,6 +61,7 @@ export function createDynamicList(items, options) {
         price.textContent = `$${item.price}`;
         price.classList.add('price'); // Общий класс для цен
         listItem.appendChild(price);
+        console.log('Добавлена цена:', price.textContent); // Отладочное сообщение
       }
 
       if (item.rating !== undefined) {
@@ -71,27 +69,36 @@ export function createDynamicList(items, options) {
         rating.textContent = `Rating: ${item.rating}`;
         rating.classList.add('rating'); // Общий класс для рейтинга
         listItem.appendChild(rating);
+        console.log('Добавлен рейтинг:', rating.textContent); // Отладочное сообщение
       }
     }
 
     // Обработка вложенных элементов
     if (item.children && Array.isArray(item.children)) {
+      console.log('Обрабатываем вложенные элементы:', item.children); // Отладочное сообщение
+
       const nestedListOptions = {
-        listType: options.listType,
-        listClass: options.listClass,
+        listType: 'ul', // Создаем вложенный список типа ul
+        listClass: '',   // Класс можно оставить пустым или задать конкретный
         itemType: options.itemType,
         itemClass: options.itemClass,
         linkClass: options.linkClass,
       };
 
-      const nestedList = createDynamicList(item.children, nestedListOptions);
+      const nestedList = createDynamicList(item.children, nestedListOptions); // Создаем вложенный список
+
+      console.log('Созданный вложенный список:', nestedList); // Отладочное сообщение
+
       if (nestedList) {
-        listItem.appendChild(nestedList); // Добавляем вложенный список
+        listItem.appendChild(nestedList); // Добавляем вложенный список в текущий элемент списка
+        console.log('Вложенный список добавлен к элементу:', item.title || item.subtitle); // Отладочное сообщение
+      } else {
+        console.warn('Вложенный список не был создан для элемента:', item); // Отладочное сообщение
       }
     }
 
     list.appendChild(listItem); // Добавляем элемент списка
   });
 
-  parentElement.appendChild(list); // Добавляем список в родительский элемент
+  return list; // Возвращаем созданный список вместо добавления его в родительский элемент здесь
 }

@@ -20,7 +20,7 @@ export const customListData = [
     link: "#custom3",
     children: [
       {
-        src: "./public/assets/images/example.jpg",
+        src: "./public/assets/images/hiro.webp",
         alt: "Example Image",
         width: 300,
         height: 200,
