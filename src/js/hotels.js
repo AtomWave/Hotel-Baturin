@@ -13,16 +13,56 @@ if (hasCatalog) {
 
 export const hotels = [
   {
-    img: `${path}public/assets/images/london.webp`,
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля Danubius',
     subtitle: 'Hotel 1',
     title: 'Danubius Hotel Regents Park',
     price: 150,
     rating: 4.5,
     width: 300, // Устанавливаем ширину изображения
     height: 200, // Устанавливаем высоту изображения
+    children: [
+      {
+        text: 'More about Hotel 1',
+        link: '#more-hotel-1'
+      }
+    ]
   },
   {
-    img: `${path}public/assets/images/london.webp`,
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля The Resident Soho',
+    subtitle: 'Hotel 2',
+    title: 'The Resident Soho',
+    price: 120,
+    rating: 4.7,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
+    children: [
+      {
+        text: 'More about Hotel 1',
+        link: '#more-hotel-1'
+      }
+    ]
+  },
+  {
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля The Resident Soho',
+    subtitle: 'Hotel 3',
+    title: 'London Bridge Hotel',
+    price: 100,
+    rating: 3.8,
+    width: 300, // Устанавливаем ширину изображения
+    height: 200, // Устанавливаем высоту изображения
+    children: [
+      {
+        text: 'More about Hotel 1',
+        link: '#more-hotel-1'
+      }
+    ]
+  },
+  {
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля The Resident Soho',
     subtitle: 'Hotel 2',
     title: 'The Resident Soho',
     price: 120,
@@ -31,7 +71,8 @@ export const hotels = [
     height: 200, // Устанавливаем высоту изображения
   },
   {
-    img: `${path}public/assets/images/london.webp`,
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля The Resident Soho',
     subtitle: 'Hotel 3',
     title: 'London Bridge Hotel',
     price: 100,
@@ -40,85 +81,15 @@ export const hotels = [
     height: 200, // Устанавливаем высоту изображения
   },
   {
-    img: `${path}public/assets/images/london.webp`,
+    src: `${path}public/assets/images/london.webp`,
+    alt: 'Изображение отеля The Resident Soho',
     subtitle: 'Hotel 2',
     title: 'The Resident Soho',
     price: 120,
     rating: 4.7,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 3',
-    title: 'London Bridge Hotel',
-    price: 100,
-    rating: 3.8,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 2',
-    title: 'The Resident Soho',
-    price: 120,
-    rating: 4.7,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 3',
-    title: 'London Bridge Hotel',
-    price: 100,
-    rating: 3.8,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 2',
-    title: 'The Resident Soho',
-    price: 120,
-    rating: 4.7,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 3',
-    title: 'London Bridge Hotel',
-    price: 100,
-    rating: 3.8,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 2',
-    title: 'The Resident Soho',
-    price: 120,
-    rating: 4.7,
-    width: 300, // Устанавливаем ширину изображения
-    height: 200, // Устанавливаем высоту изображения
-  },
-  {
-    img: `${path}public/assets/images/london.webp`,
-    subtitle: 'Hotel 3',
-    title: 'London Bridge Hotel',
-    price: 100,
-    rating: 3.8,
     width: 300, // Устанавливаем ширину изображения
     height: 200, // Устанавливаем высоту изображения
   },
 ];
 
-// Опции для настройки списка отелей
-export const hotelOptions = {
-  containerSelector: '.hotels',
-  listType: 'ul', // Используем ul для списка отелей
-  listClass: 'hotel-list',
-  itemType: 'li', // Используем li для каждого элемента списка
-  itemClass: 'hotel-item', // Класс для пунктов списка отелей
-};
 

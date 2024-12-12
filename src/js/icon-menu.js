@@ -1,3 +1,5 @@
+// icon-menu.js
+
 //==== Модуь работы с меню (бургер)
 
 export function initializeMenuToggle(iconMenuSelector, headerSelector, mainSelector) {

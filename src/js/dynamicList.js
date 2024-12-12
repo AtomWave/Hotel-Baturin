@@ -1,16 +1,11 @@
-/**
- * Функция для создания динамического списка на основе массива элементов.
- * @param {Array} items - Массив объектов, представляющих пункты списка.
- * @param {Object} options - Опции для настройки списка.
- */
 export function createDynamicList(items, options) {
   const {
     containerSelector,
-    listType = 'ul', // Используем ul по умолчанию
+    listType = 'ul',
     listClass = '',
-    itemType = 'li', // Используем li по умолчанию
-    itemClass = '', // Класс для пунктов списка
-    linkClass = '', // Класс для ссылок
+    itemType = 'li',
+    itemClass = '',
+    linkClass = '',
   } = options;
 
   const parentElement = document.querySelector(containerSelector);
@@ -20,53 +15,38 @@ export function createDynamicList(items, options) {
     return;
   }
 
-  // Удаляем существующий список, если он есть
-  const existingList = parentElement.querySelector(listType);
-  if (existingList) {
-    existingList.remove();
-  }
-
-  // Создаем новый контейнер для списка
   const list = document.createElement(listType);
-
   if (listClass) {
     list.classList.add(...listClass.split(' '));
   }
 
   items.forEach(item => {
-    const listItem = document.createElement(itemType); // Создаем элемент пункта списка
-
+    const listItem = document.createElement(itemType);
     if (itemClass) {
-      listItem.classList.add(...itemClass.split(' ')); // Добавляем класс к пункту списка
+      listItem.classList.add(...itemClass.split(' '));
     }
 
-    if (item.link) { // Для меню навигации
+    // Обработка ссылок
+    if (item.link) {
       const link = document.createElement('a');
       link.href = item.link;
-      link.textContent = item.text; // Устанавливаем текст ссылки
+      link.textContent = item.text || 'Link'; // Используем текст по умолчанию
       if (linkClass) {
-        link.classList.add(...linkClass.split(' ')); // Добавляем классы к ссылке
+        link.classList.add(...linkClass.split(' '));
       }
-      listItem.appendChild(link); // Добавляем ссылку в пункт списка
-    } else if (item.src) { // Для изображений
+      listItem.appendChild(link);
+    }
+
+    // Обработка изображений
+    if (item.src) { // Если есть изображение
       const img = document.createElement('img');
-      img.src = item.src; // Устанавливаем источник изображения
-      img.alt = item.alt || 'Изображение'; // Устанавливаем альтернативный текст
-
-      if (item.width) img.width = item.width; // Устанавливаем ширину изображения, если указано
-      if (item.height) img.height = item.height; // Устанавливаем высоту изображения, если указано
-
-      listItem.appendChild(img); // Добавляем изображение в пункт списка
-    } else if (item.img) { // Для отелей
-      const img = document.createElement('img');
-      img.src = item.img;
-      img.alt = item.title || 'Отель';
-
+      img.src = item.src;
+      img.alt = item.alt || 'Изображение'; // Используем alt из данных
       if (item.width) img.width = item.width;
       if (item.height) img.height = item.height;
-
       listItem.appendChild(img);
 
+      // Добавление заголовка и других свойств
       if (item.title) {
         const title = document.createElement('h2');
         title.textContent = item.title;
@@ -82,21 +62,35 @@ export function createDynamicList(items, options) {
       if (item.price !== undefined) {
         const price = document.createElement('span');
         price.textContent = `$${item.price}`;
-        price.classList.add('hotel-price');
-
+        price.classList.add('price'); // Общий класс для цен
         listItem.appendChild(price);
       }
 
       if (item.rating !== undefined) {
         const rating = document.createElement('span');
         rating.textContent = `Rating: ${item.rating}`;
-        rating.classList.add('hotel-rating');
-
+        rating.classList.add('rating'); // Общий класс для рейтинга
         listItem.appendChild(rating);
       }
     }
 
-    list.appendChild(listItem); // Добавляем пункт в список
+    // Обработка вложенных элементов
+    if (item.children && Array.isArray(item.children)) {
+      const nestedListOptions = {
+        listType: options.listType,
+        listClass: options.listClass,
+        itemType: options.itemType,
+        itemClass: options.itemClass,
+        linkClass: options.linkClass,
+      };
+
+      const nestedList = createDynamicList(item.children, nestedListOptions);
+      if (nestedList) {
+        listItem.appendChild(nestedList); // Добавляем вложенный список
+      }
+    }
+
+    list.appendChild(listItem); // Добавляем элемент списка
   });
 
   parentElement.appendChild(list); // Добавляем список в родительский элемент
