@@ -13,12 +13,22 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --button-color: #24ab70; /* Цвет кнопки */
+  --button-hover-color: #24ab701a; /* Цвет кнопки при наведении */
+  --contrast-text-color: #ffffff; /* Цвет текста на кнопке */
 }
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 a:hover {
@@ -35,8 +45,8 @@ h1 {
   padding: 0 60px;
 
   @media (min-width: var.$tablet-width) {
-    max-width: 768px;
     padding: 0 80px;
+    max-width: 768px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -66,12 +76,15 @@ h1 {
   flex-grow: 1;
 }
 
-.image__hotel {
-  // border: 50px solid red;
-}
-
 .list-reset {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* ========= подстраховка от измеения размера картинок в исходниках и разметке ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

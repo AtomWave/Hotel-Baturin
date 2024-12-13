@@ -1,6 +1,10 @@
+/* variables.scss */
+
 $body: #ffffff;
 $body-text: #242424;
 $contrast-text: #ffffff;
+$main-text: #555555;
+$minor-text: #222222;
 $accent-text: #24ab70;
 $button: #24ab70;
 $button-hover: #24ab701a;
@@ -22,11 +26,4 @@ $second-font: "Intan", "Arial", sans-serif;
 // Брейкпоинты
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1280px;
-
-/* variables.scss */
-:root {
-  --button-color: #24ab70; /* Цвет кнопки */
-  --button-hover-color: #24ab701a; /* Цвет кнопки при наведении */
-  --contrast-text-color: #ffffff; /* Цвет текста на кнопке */
-}
+$desktop-width: 1440px;

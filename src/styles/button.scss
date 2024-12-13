@@ -1,0 +1,22 @@
+@use "variables" as var;
+
+.watch-video.button--video {
+  position: relative;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var.$minor-text;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    // background-color: var.$body;
+    src: url("../../original_images/icon/arrow-right.svg");
+  }
+}
+

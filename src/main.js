@@ -108,3 +108,13 @@ createButton({
   text: 'Search...',
   parentSelector: '.search__btn'
 });
+
+// Создаем кнопку "Видео"
+createButton({
+  elementType: 'button',
+  className: 'watch-video button button--video',
+  href: '#',
+  ariaLabel: 'Смотреть видео.',
+  text: 'Watch video',
+  parentSelector: '.video-btn'
+});
