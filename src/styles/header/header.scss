@@ -1,6 +1,8 @@
 @use "../variables" as var;
 
 .header {
+  transition: margin-bottom 0.5s ease; // Плавное изменение padding-top
+
   // .header__menu
   &__menu {
     position: relative;
@@ -19,9 +21,8 @@
     line-height: 20px;
 
     @media (min-width: var.$tablet-width) {
-      top: 50%;
+      top: 2px;
       right: 60px;
-      transform: translateY(-50%);
     }
   }
 

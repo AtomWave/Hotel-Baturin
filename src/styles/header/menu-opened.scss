@@ -3,7 +3,6 @@
 // .menu--opened
 .menu--opened {
   .header__menu {
-    padding-bottom: 430px;
 
     @media (min-width: var.$tablet-width) {
       padding-bottom: 0;

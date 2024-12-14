@@ -16,32 +16,61 @@
                     <!-- для рисования бургера -->
                     <span></span>
                 </button>
-                <nav class="menu__body" aria-label="Навигация по сайту.">
-                    <ul class="menu__list list-reset">
-                        <li class="menu__item">
-                            <a class="menu__link menu__link--current" href="index.html" aria-current="page">Booking</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="Facilities.html">Facilities</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="About.html">About Us</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="Location.html">Location</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="Contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+                <nav class="menu__body" aria-label="Навигация по сайту."></nav>
             </div>
         </header>
-        <main class="main">
+        <main class="page__main main">
+            <section class="main__hero hero">
+                <div class="container">
+                    <div class="hero__wrapper">
+                        <div class="hero__content">
+                            <h1 class="hero__title">Find your perfect place to stay</h1>
+                            <p class="hero__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="hero__watch video-btn">
+                                <div class="video-btn-icon">
+                                    <svg width="16" height="20">
+                                        <use href="/assets/vectors/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__image">
+                            <img src="./public/assets/images/hiro.webp" alt="Фото коттеджа" width="640" height="656">
+                        </div>
+
+                        <form class="hero__search-form search">
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Location.</legend> -->
+                                <label class="search__label" for="location">Location</label>
+                                <input class="search__control field" id="location" name="location" type="text" value="United States" placeholder="United States" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Check In.</legend> -->
+                                <label class="search__label" for="check-in">Check In</label>
+                                <input class="search__control field" id="check-in" name="check-in" type="text" value="10 Jun 2021" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Check out.</legend> -->
+                                <label class="search__label" for="check-out">Check out</label>
+                                <input class="search__control field" id="check-out" name="check-out" type="text" value="15 Jun 2021" required="">
+                            </div>
+                            <div class="search__group">
+                                <!-- <legend class="visually-hidden">Rooms for.</legend> -->
+                                <label class="search__label" for="rooms-for">Rooms for</label>
+                                <input class="search__control field" id="rooms-for" name="rooms-for" type="text" value="1 room, 2 guests" required="">
+                            </div>
+                            <div class="search__btn"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="container">
-
+                    <div class="image-gallery"></div>
+                    <div class="hotels"></div>
+                    <div class="custom-list-container"></div>
                 </div>
+                <p></p>
             </section>
         </main>
         <footer class="footer">
@@ -50,7 +79,7 @@
                 <button class="counter"></button>
                 <a href="src/pages/catalog.html">catalog</a>
                 <svg width="50" height="50">
-                    <use href="/assets/vectors/sprite.svg#shield"></use>
+                    <use href="/assets/vectors/sprite2.svg#shield"></use>
                 </svg>
                 <img src="/assets/images/avatar-1.avif323" alt="">
             </div>
