@@ -1,5 +1,16 @@
 @use "variables" as var;
 
 .footer {
-  background-color: var.$button;
+  // background-color: var.$button;
+}
+
+.footer {
+  // .footer__icon
+  &__icon {
+    color: var.$button;
+  }
+}
+.container {
+}
+.counter {
 }

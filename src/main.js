@@ -49,55 +49,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================= Список изображений ===================================
-document.addEventListener('DOMContentLoaded', () => {
-  const imageList = createDynamicList(imageItems, {
-    listType: 'ul',
-    listClass: 'image-gallery__wrapper list-reset',
-    itemType: 'li',
-    itemClass: 'image-item'
-  });
+// document.addEventListener('DOMContentLoaded', () => {
+//   const imageList = createDynamicList(imageItems, {
+//     listType: 'ul',
+//     listClass: 'image-gallery__wrapper list-reset',
+//     itemType: 'li',
+//     itemClass: 'image-item'
+//   });
 
-  const imageGalleryContainer = document.querySelector('.image-gallery');
-  if (imageGalleryContainer) {
-    imageGalleryContainer.appendChild(imageList); // Добавляем созданный список изображений
-  } else {
-    console.error('Родительский элемент .image-gallery-container не найден.');
-  }
-});
+//   const imageGalleryContainer = document.querySelector('.image-gallery');
+//   if (imageGalleryContainer) {
+//     imageGalleryContainer.appendChild(imageList); // Добавляем созданный список изображений
+//   } else {
+//     console.error('Родительский элемент .image-gallery-container не найден.');
+//   }
+// });
 
 // ================= Список отелей ========================================
-document.addEventListener('DOMContentLoaded', () => {
-  const hotelList = createDynamicList(hotels, {
-    listType: 'ul',
-    listClass: 'hotel-list list-reset',
-    itemType: 'li',
-    itemClass: 'hotel-item'
-  });
+// document.addEventListener('DOMContentLoaded', () => {
+//   const hotelList = createDynamicList(hotels, {
+//     listType: 'ul',
+//     listClass: 'hotel-list list-reset',
+//     itemType: 'li',
+//     itemClass: 'hotel-item'
+//   });
 
-  const parentElement = document.querySelector('.hotels');
-  if (parentElement) {
-    parentElement.appendChild(hotelList); // Добавляем созданный список в родительский элемент
-  } else {
-    console.error('Родительский элемент .hotels не найден.');
-  }
-});
+//   const parentElement = document.querySelector('.hotels');
+//   if (parentElement) {
+//     parentElement.appendChild(hotelList); // Добавляем созданный список в родительский элемент
+//   } else {
+//     console.error('Родительский элемент .hotels не найден.');
+//   }
+// });
 
 // ================= Пример создания дополнительного списка =================
-document.addEventListener('DOMContentLoaded', () => {
-  const customList = createDynamicList(customListData, {
-    listType: 'ul',
-    listClass: 'custom-list list-reset',
-    itemType: 'li',
-    itemClass: 'custom-item'
-  });
+// document.addEventListener('DOMContentLoaded', () => {
+//   const customList = createDynamicList(customListData, {
+//     listType: 'ul',
+//     listClass: 'custom-list list-reset',
+//     itemType: 'li',
+//     itemClass: 'custom-item'
+//   });
 
-  const customListContainer = document.querySelector('.custom-list-container');
-  if (customListContainer) {
-    customListContainer.appendChild(customList); // Добавляем созданный список изображений
-  } else {
-    console.error('Родительский элемент .image-gallery-container не найден.');
-  }
-});
+//   const customListContainer = document.querySelector('.custom-list-container');
+//   if (customListContainer) {
+//     customListContainer.appendChild(customList); // Добавляем созданный список изображений
+//   } else {
+//     console.error('Родительский элемент .image-gallery-container не найден.');
+//   }
+// });
 
 // Создаем кнопку "Search"
 createButton({
@@ -112,7 +112,7 @@ createButton({
 // Создаем кнопку "Видео"
 createButton({
   elementType: 'button',
-  className: 'watch-video button button--video',
+  className: 'button',
   href: '#',
   ariaLabel: 'Смотреть видео.',
   text: 'Watch video',
