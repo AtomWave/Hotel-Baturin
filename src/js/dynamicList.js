@@ -27,7 +27,7 @@ export function createDynamicList(items, options) {
         link.classList.add(...linkClass.split(' '));
       }
       listItem.appendChild(link);
-      console.log('Добавлена ссылка:', link.textContent); // Отладочное сообщение
+      // console.log('Добавлена ссылка:', link.textContent); // Отладочное сообщение
     }
 
     // Обработка изображений
@@ -39,21 +39,21 @@ export function createDynamicList(items, options) {
       if (item.height) img.height = item.height;
       listItem.appendChild(img);
 
-      console.log('Добавлено изображение:', img.src); // Отладочное сообщение
+      // console.log('Добавлено изображение:', img.src); // Отладочное сообщение
 
       // Добавление заголовка и других свойств
       if (item.title) {
         const title = document.createElement('h2');
         title.textContent = item.title;
         listItem.appendChild(title);
-        console.log('Добавлен заголовок:', title.textContent); // Отладочное сообщение
+        // console.log('Добавлен заголовок:', title.textContent); // Отладочное сообщение
       }
 
       if (item.subtitle) {
         const subtitle = document.createElement('p');
         subtitle.textContent = item.subtitle;
         listItem.appendChild(subtitle);
-        console.log('Добавлено подзаголовок:', subtitle.textContent); // Отладочное сообщение
+        // console.log('Добавлено подзаголовок:', subtitle.textContent); // Отладочное сообщение
       }
 
       if (item.price !== undefined) {
@@ -61,7 +61,7 @@ export function createDynamicList(items, options) {
         price.textContent = `$${item.price}`;
         price.classList.add('price'); // Общий класс для цен
         listItem.appendChild(price);
-        console.log('Добавлена цена:', price.textContent); // Отладочное сообщение
+        // console.log('Добавлена цена:', price.textContent); // Отладочное сообщение
       }
 
       if (item.rating !== undefined) {
@@ -69,7 +69,7 @@ export function createDynamicList(items, options) {
         rating.textContent = `Rating: ${item.rating}`;
         rating.classList.add('rating'); // Общий класс для рейтинга
         listItem.appendChild(rating);
-        console.log('Добавлен рейтинг:', rating.textContent); // Отладочное сообщение
+        // console.log('Добавлен рейтинг:', rating.textContent); // Отладочное сообщение
       }
     }
 
@@ -87,13 +87,13 @@ export function createDynamicList(items, options) {
 
       const nestedList = createDynamicList(item.children, nestedListOptions); // Создаем вложенный список
 
-      console.log('Созданный вложенный список:', nestedList); // Отладочное сообщение
+      // console.log('Созданный вложенный список:', nestedList); // Отладочное сообщение
 
       if (nestedList) {
         listItem.appendChild(nestedList); // Добавляем вложенный список в текущий элемент списка
         console.log('Вложенный список добавлен к элементу:', item.title || item.subtitle); // Отладочное сообщение
       } else {
-        console.warn('Вложенный список не был создан для элемента:', item); // Отладочное сообщение
+        // console.warn('Вложенный список не был создан для элемента:', item); // Отладочное сообщение
       }
     }
 
