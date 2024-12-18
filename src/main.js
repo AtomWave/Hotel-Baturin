@@ -1,15 +1,13 @@
 // main.js
 
 import '/public/styles/style.scss'; // Подключаем глобальные стили
+
 import { setupCounter } from './js/counter.js';
 import { initTabs } from './js/tabs.js';
 import { initializeMenuToggle } from "./js/icon-menu.js";
 import { createButton } from './js/buttonModule.js';
 import { createDynamicList } from './js/dynamicList.js';
 import { items } from './js/menuItems.js'; // Импортируем только данные меню
-import { hotels } from './js/hotels.js'; // Импортируем только данные об отелях
-import { imageItems } from './js/imageItems.js'; // Импортируем только данные изображений
-import { customListData } from './js/custom-list.js'; // Импортируем данные для дополнительного списка
 
 const counter = document.querySelector('.counter');
 if (counter) {
