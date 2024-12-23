@@ -66,21 +66,4 @@
   }
 }
 
-.search {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
 
-  // .search__group
-  &__group {
-    padding: 26px 30px;
-  }
-  // .search__label
-  &__label {
-  }
-  // .search__control
-  &__control {
-  }
-  // .search__btn
-  &__btn {
-  }
-}

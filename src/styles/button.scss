@@ -86,3 +86,16 @@
     }
   }
 }
+
+.search-button {
+  &__btn {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .button {
+    padding: 38px 46px 38px 82px;
+    border-radius: 280px;
+  }
+}

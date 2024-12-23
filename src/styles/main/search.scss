@@ -1,0 +1,52 @@
+@use "../variables" as var;
+
+.search {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: var.$body;
+  border-radius: 280px;
+  color: var.$minor-text;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  // .search__group
+  &__group {
+    padding: 26px 30px 26px 64px;
+    position: relative;
+  }
+
+  &__group:not(:first-child, :last-child) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60px;
+      background-color: var.$minor-border;
+      display: block;
+    }
+  }
+
+  // .search__label
+  &__label {
+    white-space: nowrap;
+  }
+  // .search__control
+  &__control {
+    width: 100%;
+    outline: none; /* Убирает обводку */
+    border: none; /* Убирает рамку */
+    background: transparent; /* Делаем фон прозрачным */
+    appearance: none;
+    padding: 0;
+    color: var.$main-text;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  // .search__run-button
+  &__run-button {
+  }
+}

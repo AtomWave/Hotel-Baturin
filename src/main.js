@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Создаем кнопку "Search"
 createButton({
   elementType: 'button',
-  className: 'run-search button',
+  className: 'search-button__btn button',
   href: '#',
   ariaLabel: 'Найти отель.',
   text: 'Search...',
-  parentSelector: '.search__btn'
+  parentSelector: '.search-button'
 });
 
 // Создаем кнопку "Видео"
