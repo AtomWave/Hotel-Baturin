@@ -33,7 +33,16 @@
   // .search__label
   &__label {
     white-space: nowrap;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: -14px;
+      transform: translateX(-50%);
+    }
   }
+
   // .search__control
   &__control {
     width: 100%;

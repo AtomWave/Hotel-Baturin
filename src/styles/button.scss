@@ -88,6 +88,7 @@
 }
 
 .search-button {
+  position: relative;
   &__btn {
     font-weight: 400;
     font-size: 18px;
@@ -97,5 +98,12 @@
   .button {
     padding: 38px 46px 38px 82px;
     border-radius: 280px;
+  }
+
+  svg {
+    position: absolute;
+    left: 49px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
