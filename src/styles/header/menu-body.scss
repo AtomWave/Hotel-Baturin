@@ -18,6 +18,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 560px;
+    margin: 0px auto;
 
     @media (min-width: var.$tablet-width) {
       letter-spacing: 0;
@@ -50,8 +52,16 @@
     font-weight: 600;
     line-height: 24px;
     color: var.$body-text;
+    white-space: nowrap;
 
     @media (min-width: var.$tablet-width) {
+      padding: 10px 14px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    @media (min-width: var.$desktop-width) {
       padding: 10px 20px;
       border-radius: 35px;
       font-size: 16px;
@@ -73,7 +83,7 @@
       text-align: center;
       display: flex;
       align-items: center;
-      margin-left: 7px;
+      margin: 0 3.5px;
     }
   }
 
@@ -87,7 +97,7 @@
       text-align: center;
       display: flex;
       align-items: center;
-      margin-left: 7px;
+      margin: 0 3.5px;
     }
   }
 
@@ -102,7 +112,7 @@
         text-align: center;
         display: flex;
         align-items: center;
-        margin-left: 7px;
+        margin: 0 3.5px;
       }
     }
   }
@@ -116,7 +126,7 @@
       text-align: center;
       display: flex;
       align-items: center;
-      margin-left: 7px;
+      margin: 0 -3.5px;
     }
   }
 

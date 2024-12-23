@@ -47,11 +47,11 @@ h1 {
 
   @media (min-width: var.$tablet-width) {
     padding: 0 80px;
-    max-width: 768px;
+    // max-width: 768px;
   }
 
   @media (min-width: var.$desktop-width) {
-    max-width: 1280px;
+    max-width: 1440px;
   }
 }
 
