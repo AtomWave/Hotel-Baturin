@@ -49,6 +49,8 @@
   // .hero__image
   &__image {
     width: 50%;
+    overflow: hidden;
+    border-radius: 0 50px 0 0;
 
     img {
       vertical-align: middle;
@@ -65,5 +67,3 @@
     transform: translateX(-50%);
   }
 }
-
-

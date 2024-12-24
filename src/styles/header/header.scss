@@ -23,12 +23,16 @@
 
     @media (min-width: var.$tablet-width) {
       top: 2px;
-      right: 0;
+      right: 80px;
     }
   }
 
   // .header @media
   @media (min-width: var.$tablet-width) {
     padding: 40px 0px;
+  }
+
+  .container {
+    padding: 0;
   }
 }
