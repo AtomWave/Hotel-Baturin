@@ -8,6 +8,7 @@ import { initializeMenuToggle } from "./js/icon-menu.js";
 import { createButton } from './js/buttonModule.js';
 import { createDynamicList } from './js/dynamicList.js';
 import { items } from './js/menuItems.js'; // Импортируем только данные меню
+import { insertSVGIcons } from './js/svgInsertions.js'; // Импортируем функции для вставки SVG
 
 const counter = document.querySelector('.counter');
 if (counter) {
@@ -116,3 +117,7 @@ createButton({
   text: 'Watch video',
   parentSelector: '.video-btn'
 });
+
+
+// Вызов функции для вставки SVG
+insertSVGIcons(); // Вставляем необходимые иконки SVG

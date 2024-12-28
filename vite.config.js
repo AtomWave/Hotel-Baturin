@@ -3,7 +3,7 @@ import path from 'path';
 
 export default defineConfig({
   // Замените на название своего репозитория
-  base: '/Hotel-Baturin/',
+  base: process.env.BASE_PATH,
   build: {
     rollupOptions: {
       input: {
