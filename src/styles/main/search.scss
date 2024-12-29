@@ -2,9 +2,7 @@
 
 .search {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background-color: var.$body;
-  border-radius: 280px;
+  border-radius: 30px;
   color: var.$minor-text;
   font-size: 20px;
   font-weight: 400;
@@ -12,21 +10,42 @@
 
   // .search__group
   &__group {
-    padding: 26px 30px 26px 64px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 20px;
     position: relative;
+    text-align: center;
+    width: fit-content;
+
+    @media (min-width: var.$tablet-width) {
+      padding: 26px 30px 26px 64px;
+      text-align: start;
+    }
+  }
+
+  &__group:nth-last-child(2) {
+    padding-right: 85px;
   }
 
   &__group:not(:first-child, :last-child) {
     &::before {
       content: "";
       position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1px;
-      height: 60px;
+      right: 50%;
+      top: 0;
+      transform: translateX(50%);
+      width: 90%;
+      height: 1px;
       background-color: var.$minor-border;
       display: block;
+
+      @media (min-width: var.$tablet-width) {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60px;
+      }
     }
   }
 
@@ -34,17 +53,24 @@
   &__label {
     white-space: nowrap;
     position: relative;
+    display: block;
+    margin-bottom: 8px;
 
     svg {
       position: absolute;
-      top: 0;
-      left: -14px;
-      transform: translateX(-50%);
+      top: 50%;
+      left: -38px;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: var.$tablet-width) {
+      font-size: calc(16px + 4 * (100vw - 769px) / 880);
     }
   }
 
   // .search__control
   &__control {
+    display: inline-block;
     width: 100%;
     outline: none; /* Убирает обводку */
     border: none; /* Убирает рамку */
@@ -54,8 +80,27 @@
     color: var.$main-text;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
+    // min-width: 110px;
+
+    @media (min-width: var.$tablet-width) {
+      text-align: start;
+    }
   }
   // .search__run-button
   &__run-button {
+    margin-top: 30px;
+
+    @media (min-width: var.$tablet-width) {
+      margin-top: 0;
+    }
+  }
+
+  // .search
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: repeat(5, 1fr);
+    border-radius: 280px;
+    font-size: 20px;
+    background-color: var.$body;
   }
 }
