@@ -119,15 +119,22 @@
     display: block;
 
     @media (min-width: var.$tablet-width) {
-      padding: 38px 46px 38px 82px;
-      border-radius: 280px;
+      padding: 20px;
+      border-radius: 30px;
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   svg {
-    position: absolute;
-    left: 49px;
-    top: 50%;
-    transform: translateY(-50%);
+    // position: absolute;
+    // left: 49px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    margin-right: 12px;
   }
 }

@@ -10,21 +10,23 @@
 
   // .search__group
   &__group {
-    display: flex;
-    flex-direction: column;
     padding: 20px 30px 20px;
     position: relative;
-    text-align: center;
     width: fit-content;
+    width: 100%;
 
     @media (min-width: var.$tablet-width) {
       padding: 26px 30px 26px 64px;
       text-align: start;
+      display: flex;
+      flex-direction: column;
     }
   }
 
   &__group:nth-last-child(2) {
-    padding-right: 85px;
+    @media (min-width: var.$tablet-width) {
+      padding-right: 85px;
+    }
   }
 
   &__group:not(:first-child, :last-child) {
@@ -55,6 +57,7 @@
     position: relative;
     display: block;
     margin-bottom: 8px;
+    justify-self: center;
 
     svg {
       position: absolute;
@@ -93,14 +96,16 @@
 
     @media (min-width: var.$tablet-width) {
       margin-top: 0;
+      grid-column: 1/3;
     }
   }
 
   // .search
   @media (min-width: var.$tablet-width) {
-    grid-template-columns: repeat(5, 1fr);
-    border-radius: 280px;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 30px;
     font-size: 20px;
     background-color: var.$body;
+    max-width: 500px;
   }
 }

@@ -9,5 +9,5 @@ export function insertSVGIcons() {
   insertInlineSVG('label[for="check-in"]', `/assets/vectors/sprite.svg#calendar`, 24, 24);
   insertInlineSVG('label[for="check-out"]', `/assets/vectors/sprite.svg#calendar`, 24, 24);
   insertInlineSVG('label[for="rooms-for"]', `/assets/vectors/sprite.svg#person`, 24, 24);
-  insertInlineSVG('.search-button', `/assets/vectors/sprite.svg#search`, 18, 18);
+  insertInlineSVG('.search-button__btn', `/assets/vectors/sprite.svg#search`, 18, 18);
 }

@@ -44,10 +44,11 @@ h1 {
 .container {
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 520px;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 60px;
-    // max-width: 768px;
+    max-width: 100%;
   }
 
   @media (min-width: var.$desktop-width) {
