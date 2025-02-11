@@ -49,17 +49,25 @@
   &__label {
     white-space: nowrap;
     position: relative;
+    display: block;
+    margin-bottom: 8px;
+    justify-self: center;
 
     svg {
       position: absolute;
-      top: 0;
-      left: -14px;
-      transform: translateX(-50%);
+      top: 50%;
+      left: -38px;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: var.$tablet-width) {
+      font-size: calc(16px + 4 * (100vw - 769px) / 880);
     }
   }
 
   // .search__control
   &__control {
+    display: inline-block;
     width: 100%;
     outline: none; /* Убирает обводку */
     border: none; /* Убирает рамку */
@@ -69,6 +77,12 @@
     color: var.$main-text;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
+    // min-width: 110px;
+
+    @media (min-width: var.$tablet-width) {
+      text-align: start;
+    }
   }
   // .search__run-button
   &__run-button {

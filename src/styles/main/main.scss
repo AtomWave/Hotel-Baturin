@@ -1,8 +1,12 @@
+@use "../variables" as var;
+
 .main {
   // .main__hero
   &__hero {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
+
+    @media (min-width: var.$tablet-width) {
+      padding-bottom: 300px;
+    }
   }
 }
-
-
