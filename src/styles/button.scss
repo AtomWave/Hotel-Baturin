@@ -88,7 +88,9 @@
 }
 
 .search-button {
-  position: relative;
+  width: 100%;
+  max-width: 400px;
+
   &__btn {
     font-weight: 400;
     font-size: 18px;
@@ -96,14 +98,25 @@
   }
 
   .button {
-    padding: 38px 46px 38px 82px;
-    border-radius: 280px;
+    padding: 16px 32px 16px 45px;
+    border-radius: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: var.$tablet-width) {
+      padding: 38px 46px 38px 82px;
+      border-radius: 280px;
+    }
   }
 
   svg {
-    position: absolute;
-    left: 49px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 12px;
+
+    @media (min-width: var.$tablet-width) {
+      left: 49px;
+    }
   }
 }

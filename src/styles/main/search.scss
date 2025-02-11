@@ -1,19 +1,27 @@
 @use "../variables" as var;
 
 .search {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var.$body;
-  border-radius: 280px;
   color: var.$minor-text;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
+  padding: 20px;
 
   // .search__group
   &__group {
-    padding: 26px 30px 26px 64px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 40px;
+
+    @media (min-width: var.$tablet-width) {
+      padding: 26px 30px 26px 64px;
+      position: relative;
+    }
   }
 
   &__group:not(:first-child, :last-child) {
@@ -21,12 +29,19 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1px;
-      height: 60px;
+      top: 0;
+      width: 100%;
+      height: 1px;
       background-color: var.$minor-border;
       display: block;
+
+      @media (min-width: var.$tablet-width) {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60px;
+      }
     }
   }
 
@@ -57,5 +72,22 @@
   }
   // .search__run-button
   &__run-button {
+    margin-top: 20px;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0;
+    }
+  }
+
+  // .search__@media
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: var.$body;
+    border-radius: 280px;
+    color: var.$minor-text;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
   }
 }

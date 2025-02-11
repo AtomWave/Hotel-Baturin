@@ -73,7 +73,6 @@
   }
   // .hero__image
   &__image {
-    // width: 50%;
     overflow: hidden;
     border-radius: 0 0 50px 0;
 
@@ -91,13 +90,11 @@
   }
   // .hero__search-form
   &__search-form {
-    display: none;
-    position: absolute;
-    bottom: 41px;
-    left: 50%;
-    transform: translateX(-50%);
-
     @media (min-width: var.$desktop-width) {
+      position: absolute;
+      bottom: 41px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
